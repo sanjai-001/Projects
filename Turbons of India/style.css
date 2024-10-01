@@ -1,0 +1,29 @@
+*{
+    margin:1%;
+    padding:0;
+}
+
+:root {
+    --brown: #3E1404;
+    --brown2: #6A2B05;
+    --brown3: #3E1404;
+    --bisque: #e4bc84;
+    --bisque2: #FFEDDB;
+    --bisque3: #f5ac63;
+  }
+
+svg path{
+    fill: var(--brown2);
+    stroke:var(--bisque2);
+    stroke-width: 0.5;
+    transition-duration: 1.5s;
+}
+
+svg path:hover {
+    fill: var(--brown3);
+    cursor: pointer;
+}
+
+.box{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
