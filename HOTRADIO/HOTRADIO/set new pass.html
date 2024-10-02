@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW PASSWORD - HOTRADIO</title>
+    <style>
+        .inpu1{
+            padding:10px;
+            padding-left: 20px;
+            width:250px;
+            height:30px;
+            border-radius: 5px;
+            background-color:white;
+            border:1px solid #000000B3;
+            color:black;
+        }
+        .update:hover{
+            transform:scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function SetNewPassword(){
+            var Password=document.getElementById("pass").value
+            var PasswordFlag=false
+            var upper=0
+            var lower=0
+            var num=0
+            var special=0
+            for(var i=0;i<Password.length;i++){
+                if((Password[i]>='A')&&(Password[i]<='Z')){
+                    upper++
+                }
+                else if((Password[i]>='a')&&(Password[i]<='z')){
+                    lower++
+                }
+                else if((Password[i]>='0')&&(Password[i]<='9')){
+                    num++
+                }
+                else{
+                    special++
+                }
+            }
+            if((Password.length>=8)&&(Password.length<=16)&&(upper>=1)&&(lower>=1)&&(num>=1)&&(special>=1)){
+                PasswordFlag=true
+            }
+            var ConfirmPassword=document.getElementById("conpass").value
+            if(Password==ConfirmPassword){
+                window.location.href="./password updated.html"
+            }
+            else{
+                alert("Not Matching Password")
+            }
+        }
+    </script>
+    <div style="display: flex;justify-content: center;font-size:40px;font-weight:600;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color:black;margin-top: 190px;">HOT RADIO - SET NEW PASSWORD</div>
+    <div style="display:flex;justify-content:center;">
+        <form style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-top:1.5%;border:2px solid black;border-radius: 5px;padding-top:50px;padding-bottom:50px;padding-left: 70px;padding-right: 70px;">
+            <div><input type="password" placeholder="NEW PASSWORD" class="inpu1" id="pass"></div>
+            <br>
+            <div><input type="password" placeholder="CONFIRM PASSWORD" class="inpu1" id="conpass"></div>
+            <br>
+            <div><input type="button" value="UPDATE" id="new" onclick="SetNewPassword()" style="border: 2px black solid;padding: 10px;font-size: 15px; font-family: sans-serif; font-weight: 600; color: white; background-color: black; border-radius: 5px; padding-left: 20px ; padding-right: 20px;"class="update"></div>
+        </form>
+    </div>
+</body>
+</html>
