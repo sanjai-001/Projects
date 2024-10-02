@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE - HOTRADIO</title>
+    <style>
+        body {
+            background-image: url("../MEDIA/home.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        img {
+            margin: 10px;
+            border-radius: 15px;
+            transition: transform 2s;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        .imgp{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 25px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+        section {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .img1 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img1::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(120deg, rgba(228, 223, 223, 0.3), rgba(255, 255, 255, 0));
+            transform: rotate(45deg);
+            animation: shine 2s linear infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                top: -250%;
+                left: -250%;
+            }
+            100% {
+                top: 250%;
+                left: 250%;
+            }
+        }
+
+        .img1:hover{
+            transform: scale(1.1);
+        }
+        .mumo{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 200px;
+            animation: fadeInUp 2s ease-in;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="title"style="display:flex;justify-content:center;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.6);font-size:40px;font-weight:900;margin-left:25px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color:white;margin-top: 20px;">WELCOME TO HOT RADIO YOUR ULTIMATE ENTERTAINMENT HUB..!</div>
+        <div class="img1"style="border: 2px black solid; margin-top: 15px; padding: 10px;font-size: 20px; font-family: sans-serif; font-weight: 600; color: white; background-color: black; border-radius: 5px; padding-left: 30px ; padding-right: 30px;margin-left:140px;"><a href="../index.html"style="text-decoration:none;color:white;">SIGN IN</a></div>
+    </section>
+    <div class="mumo">
+        <div style="display:flex;flex-direction: column;">
+            <div style="display:flex;justify-content: center;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.6);font-size:40px;font-weight:900;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color:#1db954;">MUSICS</div>
+            <div><a href="./music.html"><img src="../MEDIA/IMAGES/music.png" height="300px" width="300px" ></a></div>
+        </div>
+        <div style="display:flex;flex-direction: column;">
+            <div style="display:flex;justify-content: center;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.6);font-size:40px;font-weight:900;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color:red;">MOVIES</div>
+            <div><a href="./movies.html"><img src="../MEDIA/IMAGES/MOVIES.jfif" height="300px" width="290px"></a></div>
+        </div>
+    </div>
+</body>
+</html>
