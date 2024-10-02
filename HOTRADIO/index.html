@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTRADIO-SIGN IN</title>
+    <style>
+        body{
+            background-image: url("./MEDIA/login1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        input{
+            padding:10px;
+            padding-left: 20px;
+            width:250px;
+            height:30px;
+        }
+        .logo{
+            height: 430px;
+            padding:48px 68px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #log{
+            width:280px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function LoginValidation(){
+            var db=[{'Username':'SANDHIYA S','Password':'sAd@26102002'},{'Username':'SOWBARNIKA S','Password':'sOwb@113'}]
+            var username=document.getElementById("user").value
+            var password=document.getElementById("pass").value
+            var flag=false
+            for(var i=0;i<db.length;i++){
+                if(db[i]['Username']==username){
+                    if(db[i]['Password']==password){
+                        flag=true
+                    }
+                }
+            }
+            if(flag==true){
+                window.location.href="./HTML/home.html"
+            }
+            else{
+                alert("Invalid Username or Incorrect Password")
+            }
+        }
+    </script>
+    <div class="left"style="display:flex;justify-content:center;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.6);font-size:40px;font-weight:900;margin-left:25px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color:white;margin-top: 20px;"><marquee>WELCOME TO HOT RADIO ENJOY <span style="color:#1db954;"> MUSICS </span> AND <span style="color:red;"> MOVIES </span> NONSTOP..!</marquee></div>
+    <div class="logo"style="display:flex;justify-content:center;margin-top:3.5%;height: 430px;">
+        <form style="display: flex;flex-direction: column;align-items: center;justify-content: center;background-color:#000000B3;padding-top:250px;padding-bottom:260px;padding-left: 80px;padding-right: 80px;">
+            <div style="color:white;font-size: 35px;font-family: sans-serif;font-weight: 800;">Sign In</div><br>
+            <div><input type="text" placeholder="USERNAME" id="user"style="background-color:#000000B3;border:1px solid #000000B3;color:white;"></div>
+            <br>
+            <div><input type="password" placeholder="PASSWORD" id="pass"style="background-color:#000000B3;border:1px solid #000000B3;color:white;"></div>
+            <br>
+            <div><input type="button" value="Sign In" onclick="LoginValidation()" id="log" style="display:flex; justify-content:center;height:40px;background-color: #e40712;color:white;font-size: 15px;font-weight: 600;border-radius: 5px;"></div>
+            <br>
+            <div><a href="./HTML/forget.html" id="forg"style="text-decoration:none;color:white;">Forget Password?</a></div>
+            <div><h3 id="new"style="color:white;">ARE YOU NEW USER?</h3></div>
+            <div><a href="./HTML/signup.html" id="sign"style="text-decoration: none;"><input type="button" value="SIGNUP"  id="log" style="display:flex;justify-content: center;height:40px;width:100px;background-color: #e40712;color:white;font-size: 15px;font-weight: 600;border-radius: 5px;"></a></div>
+        </form>
+    </div>
+</body>
+</html>
